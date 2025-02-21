@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Kayıt Ol</h2>
+        <form action="#" method="POST">
+            <label for="fullname">İsim-Soyisim:</label>
+            <input type="text" name="fullname" id="fullname" required>
+
+            <label for="email">Email adresi:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="confirmemail">Email adresi doğrulama:</label>
+            <input type="confirmemail" name="confirmemail" id="confirmemail" required>
+
+            <label for="birthdate">Doğum Tarihi:</label>
+            <input type="date" name="birthdate" id="birthdate" required>
+
+            <label for="phone">Telefon:</label>
+            <input type="tel" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" required>
+
+            <label for="password">Şifre:</label>
+            <input type="password" name="password" id="password" required>
+
+            <label for="confirmpassword">Şifre Doğrulama</label>
+            <input type="password" name="confirmpassword" id="confirmpassword" required>
+
+            <button type="submit">Kayıt Ol</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<!--
+Yine form kullanalım ve inputlar: 
+İsim-Soyisim, Email, Doğum Tarihi, Telefon ve Şifre olsun.
+-->

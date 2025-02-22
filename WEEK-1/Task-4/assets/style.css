@@ -49,6 +49,11 @@ body {
     display: block;
 }
 
+.sub-menu {
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
 ul {
     list-style: none;
 }

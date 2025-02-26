@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collatz conjecture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Collatz Conjecture</h1>
+
+        <div class="input-container">
+            <label for="number">Enter a number:</label>
+            <input type="number" name="number" id="number" min="1">
+            <button id="submitButton">Calculate</button>
+        </div>
+
+        <div class="desc-container">
+            <span>Usage:</span>
+            <ol class="usage-list">
+                <li>Enter a number in the input field.</li>
+                <li>Click the "Calculate" button.</li>
+                <li>This displays the number with the longest sequence between 1 and the entered number.</li>
+            </ol>
+        </div>
+
+    </header>
+
+    <main>
+        <div id="result">
+        </div>
+    </main>
+
+    <footer>
+        <span>Copyright &copy; 2025</span>
+        <span>Harun Can Ergin</span>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

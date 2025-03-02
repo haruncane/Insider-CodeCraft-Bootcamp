@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <H1>TO DO LIST</H1>
+    </header>
+
+    <main>
+        <div class="main-header">
+            <h2>Task List</h2>
+
+            <div class="filter-buttons">
+                <button id="showComplated">Show Complated</button>
+                <button id="sortByPriority">Sort by Priority</button>
+                <button class="create-button" id="createButton">Add Task</button>
+            </div>
+        </div>
+
+        <hr class="list-line">
+        <ul class="task-card-list"></ul>
+    </main>
+
+    <dialog class="modal">
+        <div class="modal-content">
+            <form method="dialog" class="task-form">
+                <label for="taskName">Task Name:</label>
+                <input type="text" id="taskName" name="taskName" placeholder="Enter Task" required>
+
+                <label for="taskDesc">Task Description:</label>
+                <textarea type="text" id="taskDesc" name="taskDesc" placeholder="Enter Task Description"></textarea>
+
+                <p>Task Priority:</p>
+                <div class="form-priority-group">
+                    <input type="radio" id="taskPriorityLow" name="taskPriority" value="Low" required>
+                    <label for="taskPriorityLow">Low</label>
+
+                    <input type="radio" id="taskPriorityNormal" name="taskPriority" value="Normal" required>
+                    <label for="taskPriorityNormal">Normal</label>
+
+                    <input type="radio" id="taskPriorityHigh" name="taskPriority" value="High" required>
+                    <label for="taskPriorityHigh">High</label>
+                </div>
+
+                <div class="form-buttons">
+                    <button id="cancelButton" class="cancel-button" type="button">Cancel</button>
+                    <button id="addButton" class="add-button" type="submit">Add Task</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

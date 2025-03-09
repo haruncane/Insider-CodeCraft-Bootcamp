@@ -1,0 +1,72 @@
+[
+    {
+        "name": "LG",
+        "price": "$812.93",
+        "link": "https://www.lg.com"
+    },
+    {
+        "name": "LG",
+        "price": "$929.81",
+        "link": "https://www.lg.com"
+    },
+    {
+        "name": "Sagem",
+        "price": "$942.35",
+        "link": "https://www.sagem.com"
+    },
+    {
+        "name": "Icemobile",
+        "price": "$617.40",
+        "link": "https://www.icemobile.nl"
+    },
+    {
+        "name": "Nokia",
+        "price": "$731.21",
+        "link": "https://www.nokia.com"
+    },
+    {
+        "name": "Allview",
+        "price": "$615.49",
+        "link": "https://www.allview.ro"
+    },
+    {
+        "name": "HTC",
+        "price": "$908.17",
+        "link": "https://www.htc.com"
+    },
+    {
+        "name": "Motorola",
+        "price": "$934.00",
+        "link": "https://www.motorola.com"
+    },
+    {
+        "name": "Samsung",
+        "price": "$887.24",
+        "link": "https://www.samsung.com"
+    },
+    {
+        "name": "verykool",
+        "price": "$550.00",
+        "link": "https://www.verykool.net"
+    },
+    {
+        "name": "Motorola",
+        "price": "$908.97",
+        "link": "https://www.motorola.com"
+    },
+    {
+        "name": "ZTE",
+        "price": "$544.83",
+        "link": "https://www.zte.com.cn"
+    },
+    {
+        "name": "Vodafone",
+        "price": "$991.58",
+        "link": "https://www.vodafone.com"
+    },
+    {
+        "name": "alcatel",
+        "price": "$652.81",
+        "link": "https://www.alcatelmobile.com"
+    }
+]

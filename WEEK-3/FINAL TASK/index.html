@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+        integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            const init = () => {
+                buildCss();
+                buildHtml();
+                getProducts();
+            }
+
+            const buildCss = () => {
+                $('<style>').html(`
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                        font-family: "Verdana", Geneva, Tahoma, sans-serif;
+                    }   
+                    
+                    body {
+                        height: 100vh;
+                        width: 100vw;
+                        background-color: #F4F1DE;
+                        overflow-x: hidden;
+                    }
+
+                    img {
+                        border-radius: 10px;
+                    }
+
+                    #products {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 30px;
+                        padding: 50px 100px;
+                    }
+
+                    .product-card {
+                        border-radius: 10px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        width: 300px;
+                        height: 500px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 10px;
+                        background-color: #F2CC8F;
+                        cursor: pointer;
+                        color: #3D405B;
+                    }
+
+                    .product-card span {
+                        font-weight: bold;
+                    }
+
+                    .popup {
+                        position: fixed;
+                        inset: 0;
+                        width: 100vw;
+                        height: 100vh;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        display: none;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 100;
+                        cursor: pointer;
+                    }
+
+                    .popup-container {
+                        width: 600px;
+                        height: 500px;
+                        background-color: #E07A5F;
+                        border-radius: 10px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                        display: flex;
+                        padding: 20px;
+                        cursor: default;
+                    }
+
+                    .popup-container img {
+                        transition: all .5s ease;
+                    }
+                    
+                    .popup-content {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 10px;
+                        color: #F4F1DE;
+                        height: 100%;
+                    }
+
+                    .popup-content span {
+                        margin-top: 10px;
+                    }
+
+                    .popup-content p {
+                        padding: 10px 0;
+                        margin-top: 30px;
+                        font-size: 20px;
+                    }
+
+                    .popup-content a {
+                        text-decoration: none;
+                        font-weight: bold;
+                        color: #3D405B;
+                        margin-top: auto;
+                    }
+                    
+                `).addClass('main-style').appendTo('head');
+            }
+
+            const buildHtml = () => {
+                $('body').html(`
+                    <div id="products"></div>
+                `);
+            }
+
+            const buildProducts = (data) => {
+                data.forEach(product => {
+                    $('<article>').attr('data-id', product.id).addClass('product-card').html(`
+                        <img src="${product.image}" alt="${product.title}" />
+                        <p>${product.title}</p>
+                        <span>${product.price}₺</span>
+                    `).appendTo('#products');
+                });
+            }
+
+            const buildPopup = (product) => {
+                $('<div>').addClass('popup').html(`
+                    <div class="popup-container">
+                            <img src="${product.image}" alt="${product.title}" />
+                            <div class="popup-content">
+                                <h2>${product.title}</h2>
+                                <span>${product.price}₺</span>
+                                <p>${product.desc}</p>
+                                <a href="${product.url}" target="_blank">Detaylı Bilgi için</a>
+                            </div>
+                    </div>
+                `).appendTo('body');
+                $('.popup').fadeIn(500).css('display', 'flex');
+            };
+
+            const getProducts = () => {
+                $.ajax({
+                    url: "./products.json",
+                    dataType: "json",
+                    success: function (data) {
+                        buildProducts(data);
+                    },
+                    error: function (error) {
+                        alert(error.message);
+                    },
+                });
+            }
+
+            $(document).on('click', '.product-card', (e) => {
+                const id = $(e.target).closest('.product-card').attr('data-id');
+                $.get({
+                    url: "./products.json",
+                    dataType: "json",
+                    success: function (response) {
+                        const product = response.find(product => product.id == id);
+                        buildPopup(product);
+                    },
+                    error: function (error) {
+                        alert(error.message);
+                    },
+                });
+            });
+
+            $(document).on('click', '.popup', () => {
+                $('.popup').fadeOut(500, () => { $('.popup').remove() });
+            });
+
+            $(document).on('click', '.popup-container', (e) => {
+                e.stopPropagation();
+            });
+
+            $(document).on('mouseenter', '.popup-container img', (e) => {
+                $(e.target).closest('.popup-container img').css({
+                    transform: 'scale(1.5)',
+                    border: '2px solid #3D405B'
+                });
+            });
+
+            $(document).on('mouseleave', '.popup-container img', (e) => {
+                $(e.target).closest('.popup-container img').css({
+                    transform: 'scale(1)',
+                    border: 'none'
+                });
+            });
+
+            $(document).on('mouseenter', '.product-card', (e) => {
+                $(e.target).closest('.product-card').animate({
+                    backgroundColor: '#81B29A'
+                }, 300);
+            });
+
+            $(document).on('mouseleave', '.product-card', (e) => {
+                $(e.target).closest('.product-card').animate({
+                    backgroundColor: '#F2CC8F'
+                }, 300);
+            });
+
+            init();
+        });
+    </script>
+</body>
+
+</html>

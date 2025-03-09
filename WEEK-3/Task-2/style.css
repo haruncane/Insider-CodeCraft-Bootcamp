@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #777;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#listProducts {
+    width: 20%;
+    padding: 10px 20px;
+    margin: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#products {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 50px 100px;
+}

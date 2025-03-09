@@ -1,0 +1,122 @@
+[
+    {
+        "id": 101,
+        "title": "Wireless Bluetooth Headphones",
+        "price": 49.99,
+        "url": "https://example.com/product/101",
+        "desc": "High-quality wireless headphones with noise cancellation and 20-hour battery life.",
+        "image": "https://picsum.photos/id/101/250/400"
+    },
+    {
+        "id": 102,
+        "title": "Smart Fitness Watch",
+        "price": 89.99,
+        "url": "https://example.com/product/102",
+        "desc": "Track your steps, heart rate, and sleep patterns with this waterproof smartwatch.",
+        "image": "https://picsum.photos/id/102/250/400"
+    },
+    {
+        "id": 103,
+        "title": "USB-C Charging Cable (3-Pack)",
+        "price": 14.99,
+        "url": "https://example.com/product/103",
+        "desc": "Durable and fast-charging USB-C cables compatible with various devices.",
+        "image": "https://picsum.photos/id/103/250/400"
+    },
+    {
+        "id": 104,
+        "title": "Ergonomic Office Chair",
+        "price": 199.99,
+        "url": "https://example.com/product/104",
+        "desc": "Comfortable office chair with lumbar support and adjustable height.",
+        "image": "https://picsum.photos/id/104/250/400"
+    },
+    {
+        "id": 105,
+        "title": "Portable Power Bank 20000mAh",
+        "price": 39.99,
+        "url": "https://example.com/product/105",
+        "desc": "Charge your devices on the go with this high-capacity power bank.",
+        "image": "https://picsum.photos/id/305/250/400"
+    },
+    {
+        "id": 106,
+        "title": "Wireless Mechanical Keyboard",
+        "price": 129.99,
+        "url": "https://example.com/product/106",
+        "desc": "Compact mechanical keyboard with customizable RGB lighting.",
+        "image": "https://picsum.photos/id/206/250/400"
+    },
+    {
+        "id": 107,
+        "title": "Noise Cancelling Earbuds",
+        "price": 79.99,
+        "url": "https://example.com/product/107",
+        "desc": "Enjoy immersive sound with active noise cancellation technology.",
+        "image": "https://picsum.photos/id/107/250/400"
+    },
+    {
+        "id": 108,
+        "title": "4K Ultra HD Smart TV",
+        "price": 499.99,
+        "url": "https://example.com/product/108",
+        "desc": "Smart TV with 4K resolution, built-in apps, and voice control.",
+        "image": "https://picsum.photos/id/208/250/400"
+    },
+    {
+        "id": 109,
+        "title": "Gaming Mouse with RGB",
+        "price": 59.99,
+        "url": "https://example.com/product/109",
+        "desc": "High-precision gaming mouse with programmable buttons.",
+        "image": "https://picsum.photos/id/209/250/400"
+    },
+    {
+        "id": 110,
+        "title": "Smart Home Security Camera",
+        "price": 99.99,
+        "url": "https://example.com/product/110",
+        "desc": "Monitor your home remotely with this HD security camera.",
+        "image": "https://picsum.photos/id/210/250/400"
+    },
+    {
+        "id": 111,
+        "title": "Wireless Charging Pad",
+        "price": 29.99,
+        "url": "https://example.com/product/111",
+        "desc": "Fast wireless charger compatible with most smartphones.",
+        "image": "https://picsum.photos/id/311/250/400"
+    },
+    {
+        "id": 112,
+        "title": "External Hard Drive 2TB",
+        "price": 89.99,
+        "url": "https://example.com/product/112",
+        "desc": "Store all your files securely with this high-capacity external drive.",
+        "image": "https://picsum.photos/id/312/250/400"
+    },
+    {
+        "id": 113,
+        "title": "Smart LED Light Bulb",
+        "price": 19.99,
+        "url": "https://example.com/product/113",
+        "desc": "Control your lighting with an app or voice commands.",
+        "image": "https://picsum.photos/id/313/250/400"
+    },
+    {
+        "id": 114,
+        "title": "Electric Standing Desk",
+        "price": 299.99,
+        "url": "https://example.com/product/114",
+        "desc": "Adjustable standing desk with motorized height control.",
+        "image": "https://picsum.photos/id/314/250/400"
+    },
+    {
+        "id": 115,
+        "title": "Wireless Gaming Controller",
+        "price": 49.99,
+        "url": "https://example.com/product/115",
+        "desc": "Ergonomic wireless controller compatible with multiple platforms.",
+        "image": "https://picsum.photos/id/315/250/400"
+    }
+]

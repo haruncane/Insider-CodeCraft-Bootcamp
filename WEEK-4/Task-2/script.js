@@ -227,11 +227,6 @@ const buildCss = () => {
             border: none;
             cursor: pointer;
         }
-
-        .disabled {
-            background-color: #EDF2F4;
-            cursor: not-allowed;
-        }
     `).addClass('external-style').appendTo(document.head);
 };
 
